@@ -119,6 +119,9 @@ public class InterviewQuestionCacheServiceImpl implements InterviewQuestionCache
     public void cacheResumeScore(String username, Integer resumeScore) {
         try {
             String cacheKey = RESUME_SCORE_KEY + username;
+            // 清除旧的缓存
+            stringRedisTemplate.delete(cacheKey);
+
             stringRedisTemplate.opsForValue().set(cacheKey, resumeScore.toString());
             // 设置过期时间
             stringRedisTemplate.expire(cacheKey, CACHE_EXPIRE_HOURS, TimeUnit.HOURS);

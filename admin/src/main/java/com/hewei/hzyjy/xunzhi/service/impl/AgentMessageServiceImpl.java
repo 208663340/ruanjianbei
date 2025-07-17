@@ -428,9 +428,9 @@ public class AgentMessageServiceImpl implements AgentMessageService{
                                 }
 
                             // 缓存简历评分
-                            if (responseMap.containsKey("score")) {
-                                Object scoreObj = responseMap.get("score");
-                                log.info("找到score字段，类型: {}, 值: {}", scoreObj.getClass().getSimpleName(), scoreObj);
+                            if (responseMap.containsKey("resumeScore")) {
+                                Object scoreObj = responseMap.get("resumeScore");
+                                log.info("找到resumeScore字段，类型: {}, 值: {}", scoreObj.getClass().getSimpleName(), scoreObj);
                                  Integer resumeScore = null;
 
                                  if (scoreObj instanceof Number) {
