@@ -34,3 +34,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Temporary files ###
+temp/
+src/main/resources/temp/

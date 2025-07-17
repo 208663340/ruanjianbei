@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.nageoffer.shortlink.admin.dao.mapper.AgentPropertiesMapper">
 
-    <resultMap id="BaseResultMap" type="com.nageoffer.shortlink.admin.dao.entity.AgentPropertiesDO">
+    <resultMap id="BaseResultMap" type="com.hewei.hzyjy.xunzhi.dao.entity.AgentPropertiesDO">
             <id property="id" column="id" />
             <result property="agentName" column="agent_name" />
             <result property="apiSecret" column="api_secret" />

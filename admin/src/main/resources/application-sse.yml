@@ -1,0 +1,43 @@
+# SSE配置示例
+# 可以在主配置文件中添加以下配置来自定义SSE行为
+
+sse:
+  # SSE连接超时时间（毫秒）
+  # 建议根据AI响应时间调整，长文本生成可能需要更长时间
+  timeout: 300000  # 5分钟
+  
+  # 心跳间隔时间（毫秒）
+  # 用于保持连接活跃，防止代理服务器或防火墙断开连接
+  heartbeat-interval: 10000  # 10秒
+  
+  # AI接口连接超时时间（毫秒）
+  connect-timeout: 30000  # 30秒
+  
+  # AI接口读取超时时间（毫秒）
+  read-timeout: 300000  # 5分钟
+  
+  # 是否启用心跳机制
+  # 在网络环境不稳定时建议启用
+  enable-heartbeat: true
+  
+  # 是否启用详细日志
+  # 调试时可以启用，生产环境建议关闭
+  enable-verbose-logging: false
+
+# 针对不同环境的配置建议：
+# 
+# 开发环境：
+# sse:
+#   timeout: 600000  # 10分钟，便于调试
+#   enable-verbose-logging: true
+#
+# 生产环境：
+# sse:
+#   timeout: 180000  # 3分钟，平衡用户体验和资源消耗
+#   enable-heartbeat: true
+#   enable-verbose-logging: false
+#
+# 高并发环境：
+# sse:
+#   timeout: 120000  # 2分钟，减少资源占用
+#   heartbeat-interval: 15000  # 15秒，减少心跳频率

@@ -4,16 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.nageoffer.shortlink</groupId>
-        <artifactId>shortlink-all</artifactId>
+        <groupId>com.hewei.hzyjy</groupId>
+        <artifactId>xunzhi</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>shortlink-admin</artifactId>
+    <artifactId>xunzhi-admin</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
         <dependency>
@@ -118,6 +123,22 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.11</version>
         </dependency>
+
+        <!-- Sa-Token 权限认证框架 -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot3-starter</artifactId>
+            <version>1.39.0</version>
+        </dependency>
+
+        <!-- Sa-Token 整合 Redis -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-redis-jackson</artifactId>
+            <version>1.39.0</version>
+        </dependency>
+        
+
 
     </dependencies>
     <build>
